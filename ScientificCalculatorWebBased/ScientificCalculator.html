@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Scientific Calculator</title>
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="MainStyle.css">
+</head>
+<body>
+    <div class="total">
+        <div class="leftPart">
+            <div class="navbar">
+                <h1 class="menu-icon">&#9776; Scientific</h1>
+            </div>
+            <div class="container5"><label id="display1"></label></div>
+            <div class="container4"><label id="display2">0</label></div>
+            <div class="container3">
+                <button class="btn btn2" id="angleButton">DEG</button>
+                <button class="btn btn2" id="notationButton">F-E</button>
+            </div>
+            <div class="memoryfunction">
+                <button class="btn btn2"id="mcButton" disabled>MC</button>
+                <button class="btn btn2" id="mrButton"disabled>MR</button>
+                <button class="btn btn2"id="mPlusButton">M+</button>
+                <button class="btn btn2"id="mMinusButton">M-</button>
+                <button class="btn btn2"id="msButton">MS</button>
+            </div>
+            <div class="container2">
+                <div class="trigoDiv">
+                    <button class="btn btn2" id="button_trigo" onclick="toggleTrigoButtons()"> <span style='font-size:25px;'>&#9727;</span>Trigonometry &#8964</button>
+                    <button class="btn btn2" id="button_function" onclick="toggleFunctionButtons()">&#10765 Function &#8964 </button>
+                    <div class="moreTrigoButtons" id="moreTrigo">
+                        <button class="btn" id="secondbuttonInTrigoFunction" onclick="secondbuttonInTrigoFunction()">2<sup>nd</sup></button>
+                        <button class="btn" id="sin" onclick="sinFunction()">sin</button>
+                        <button class="btn" id="cos" onclick="cosFunction()">cos</button>
+                        <button class="btn" id="tan" onclick="tanFunction()">tan</button>
+                        <button class="btn" id="hyp" onclick="hyperBolic()">hyp</button>
+                        <button class="btn" id="sec" onclick="secFunction()">sec</button>
+                        <button class="btn" id="csc" onclick="cscFunction()">csc</button>
+                        <button class="btn" id="cot" onclick="cotFunction()">cot</button>
+                    </div>
+                    <div class="moreFunctionsButtons" id="moreFunctions">
+
+                        <button class="btn" onclick="abs()">|x|</button>
+                        <button class="btn" onclick="floor()">&#8970x&#8971</button>
+                        <button class="btn" onclick="ceiling()">&#8968x&#8969</button>
+                        <button class="btn" onclick="rand()">rand</button>
+                        <button class="btn" onclick="dms()">&#8594dms</button>
+                        <button class="btn" onclick="deg()">&#8594deg</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <button class="btn" id="secondButton">2<sup>nd</sup></button>
+                <button class="btn" id="pi" onclick="piValue()">π</button>
+                <button class="btn" id="e" onclick="eValue()">e</button>
+                <button class="btn" id="button_C" onclick="clearDisplay()">C</button>
+                <button class="btn" id="backspace" onclick=" backspace() "><span>&#x232B</span></button>
+                <button class="btn" id="XSquare" onclick="sqaure()">x<sup>2</sup></button>
+                <button class="btn" id="oneByX" onclick="inverse()">1/x</button>
+                <button class="btn" id="modX" onclick="abs()">|x|</button>
+                <button class="btn" id="exp">exp</button>
+                <button class="btn" id="mod" onclick="appendToDisplay('%')">mod</button>
+                <button class="btn" id="underrootX" onclick="squareroot()"><sup>2</sup><span>&#8730</span>x</button>
+                <button class="btn" id="leftBracket" onclick="leftBracket()">(</button>
+                <button class="btn" id="rightBracket" onclick="rightBracket()">)</button>
+                <button class="btn" id="factorial" onclick="Factorial()">n!</button>
+                <button class="btn" id="divide" onclick="divideClick()"><span>&#247</span></button>
+                <button class="btn" id="xPower" onclick="xtoThePowerY()">x<sup>y</sup></button>
+                <button class="btn" id="button7">7</button>
+                <button class="btn" id="button8">8</button>
+                <button class="btn" id="button9">9</button>
+                <button class="btn" id="multiplication" onclick="intoClick()">x</button>
+                <button class="btn" id="tenPower" onclick="tensPower()">10<sup>x</sup></button>
+                <button class="btn" id="button4">4</button>
+                <button class="btn" id="button5">5</button>
+                <button class="btn" id="button6">6</button>
+                <button class="btn" id="minus" onclick="minusClick()">-</button>
+                <button class="btn" id="log" onclick="naturalLog()">log</button>
+                <button class="btn" id="button1">1</button>
+                <button class="btn" id="button2">2</button>
+                <button class="btn" id="button3">3</button>
+                <button class="btn" id="plus" onclick="plusClick()">+</button>
+                <button class="btn" id="ln" onclick="ln_baseElog()">ln</button>
+                <button class="btn" id="neogate" onclick="neogate()">+/-</button>
+                <button class="btn" id="button0">0</button>
+                <button class="btn" id="decimal" onclick="decimalClick()">.</button>
+                <button class="btn" id="Enter" onclick="calculate()">=</button>
+            </div>
+        </div>
+        <div class="rightPart">
+            <div id="rightPartButtons">
+                <button class=" btn3" id="history">History</button>
+                <button class=" btn3" id="memory">Memory</button>
+            </div>
+            <div id="historyBlock">
+                There's no history yet.
+            </div>
+            <div id="memoryBlock">
+                There's nothing saved in your memory.
+            </div>
+        </div>
+    </div>
+    <script src="Script.js"></script>
+    <script src="Arithmetic.js"></script>
+    <script src="Trignometric.js"></script>
+    
+</body>
+</html>

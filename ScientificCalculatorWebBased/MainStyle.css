@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color:black;
+    color:white;
+    }
+    
+    .container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-gap: 2px;
+    width: 100%;
+    grid-auto-rows: minmax(100px, auto);
+    
+    }
+    
+    .menu-icon {
+        display: inline-block;
+        cursor: pointer;
+        margin: 1px;
+    }
+    
+    
+    
+    .btn.clicked {
+        background-color: #3272e8;
+        color: white;
+    }
+    
+    .btn2:disabled {
+    opacity: 0.6; 
+    cursor: not-allowed; 
+    }
+    
+    .btn {
+        border-radius: 5px;
+        height: 55px;
+        min-width: 60px;
+        padding: 3px;
+        transition: all 0.2s ease;
+        background-color:#222222;
+        color: white;
+        border-color: #fcfefe;
+        border-width: 2px;
+    }
+    
+    #button7,
+    #button8,
+    #button9,
+    #button4,
+    #button5,
+    #button6,
+    #button1,
+    #button2,
+    #button3,
+    #neogate,
+    #button0,
+    #decimal {
+        background-color:#333333;
+        color: black;
+        font-size: initial;
+    }
+    
+    #Enter {
+        background-color: #3272e8;
+        color: white;
+    }
+    
+    .btn:hover {
+    background-color:#333333;
+    cursor: pointer;
+    }
+    
+    .btn:active {
+    transform: scale(0.9);
+    }
+    
+    .btn:disabled {
+    background-color: var(--btn-disabled-color);
+    cursor: not-allowed;
+    }
+    
+    .active {
+    transform: scale(0.9);
+    background-color: var(--btn-hover-color);
+    cursor: pointer;
+    }
+    
+    .btn2 {
+    height: 40px;
+    background-color: var(--btn-bg-color);
+    border-radius: 0px;
+    border-width: 0px;
+    }
+    
+    
+    .btn2:hover {
+    border-radius: 5px;
+    border-color: var(--btn-bg-color);
+    border-width: 1px;
+    }
+    
+    .btn2:disabled {
+    border-radius: 0px;
+    border-color: var(--btn-bg-color);
+    border-width: 0px;
+    color: lavender;
+    background-color: var(--btn-bg-color);
+    cursor: not-allowed;
+    }
+    
+    .btn3 
+    {
+    height: 40px;
+    font-weight: bold;
+    font-size: large;
+    min-width: 50px;
+    background-color: var(--btn-bg-color);
+    color: var(--btn-text-color);
+    border-radius: 0px;
+    border-width: 0px;
+    text-decoration: solid;
+    }
+    
+    .container2,
+    .memoryfunction,
+    .container3 {
+    display: flex;
+    gap: 1px;
+    width: 100%;
+    }
+    
+    .container2 {
+        border-top: 1px solid #ddd; 
+        margin-top: 5px;
+       
+    }
+    
+    .container4,
+    .container5 {
+    width: 100%;
+    height: 50px;
+    text-align: right;
+    }
+    
+    .container4 {
+    margin-bottom: 5px;
+    }
+    
+    .container5 {
+    margin-top: 5px;
+    }
+    
+    h1.menu-icon {
+        font-weight: normal;
+        
+    }
+    
+    .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*color: var(--main-text-color);*/
+    color:white;
+    }
+    
+    .leftPart {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 75vw;
+    font-family: 'Times New Roman';
+    }
+    
+    .moreTrigoButtons {
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    position: absolute;
+    gap: 2px;
+    z-index: 1;
+    background-color: #e4d8d8;
+    color: white;
+    }
+    
+    .moreFunctionsButtons 
+    {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    position: absolute;
+    gap: 2px;
+    z-index: 1;
+    background-color: #e4d8d8;
+    }
+    
+    #moreFunctions {
+    left: 120px;
+    }
+    
+    .total {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--main-bg-color);
+    }
+    
+    #currentInput {
+        color: var(--main-text-color);
+        width: 100%;
+        height: 100%;
+        font-size: 40px;
+        font-weight: bold;
+        text-align: right;
+        background-color: var(--main-bg-color);
+        display: inline-block;
+    }
+    
+    #previousInput {
+        font-size: 20px;
+        color: var(--main-text-color);
+    }
+    
+    .rightPart {
+    display: grid;
+    width: 25vw;
+    color: white;
+    grid-template-rows: min-content;
+    padding: 8px;
+    cursor: pointer;
+    }
+    
+    #rightPartButtons 
+    {
+    display: flex;
+    gap: 10px;
+    height: 50px;
+    }
+    
+    #memoryBlock {
+    display: none;
+    }
+    
